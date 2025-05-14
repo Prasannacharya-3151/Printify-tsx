@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
-import Features from "./Components/Features";
+import WhyChoosePrintify from "./Components/WhyChoosePrintify";
 import Aspects from "./Components/Aspects";
-import PricingTable from "./Components/PricingTable";
+import Feature from "./Components/Feature";
 
 const App:React.FC = () => {
   return(
     <>
     <Navbar />
     <HeroSection />
-    <Features />
+    <WhyChoosePrintify />
     <Aspects />
-    <PricingTable />
+    <Feature />
     
     </>
   );

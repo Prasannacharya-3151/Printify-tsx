@@ -1,13 +1,13 @@
 import React from "react";
-import oneImage from "../assets/one-image.png"
-import twoImage from "../assets/two-image.png"
-import threeImage from "../assets/three-image.png"
-import fourImage from"../assets/four-image.png"
+import oneImage from "../assets/one-image.png";
+import twoImage from "../assets/two-image.png";
+import threeImage from "../assets/three-image.png";
+import fourImage from"../assets/four-image.png";
 
 
 const Aspects:React.FC=()=>{
     return(
-        <div className="min-h-screen bg-blue-400 py-20 px-10">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-blue-400 py-20 px-10">
             <div className="flex flex-col items-center justify-center gap-3 mb-16">
             <h1 className="text-white font-bold text-4xl md:text-5xl">How It Works</h1>
             <p className="font-semibold text-white text-2xl md:text-3xl mb-10">Get your documents printed on four steps</p>
