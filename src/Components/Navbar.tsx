@@ -11,72 +11,47 @@ const Navbar: React.FC = () => {
       </div>
 
       <nav className="flex justify-between items-center px-8 md:px-16 lg:px-24 py-4 flex-wrap bg-white shadow">
-        {/* Left side logo + title */}
+     
         <div className="flex items-center space-x-3">
           <img src={printifyLogo} alt="printify-Logo.png" className="w-14 h-14" />
           <h1 className="text-2xl font-bold text-gray-800">Printify</h1>
         </div>
 
-        {/* Hamburger for mobile */}
-        <div className="block lg:hidden">
+        <div className="hidden lg:flex items-center gap-15">
+          <a href="#home" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Home</a>
+          <a href="#Services" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Services</a>
+          <a href="#Pricing" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Pricing</a>
+          <a href="#Order Now" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Order Now</a>
+          <div className="ml-30 space-x-4">
+          <button className="text-gray-600 rounded border border-gray-500 px-6 py-2 hover:bg-gray-100">Sign In</button>
+          <button className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Get Started</button>
+        </div>
+        </div>
+
+        <div className="lg:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-600 hover:text-blue-400 focus:outline-none"
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          onClick={()=> setIsOpen(!isOpen)}>
+            <svg className="w-7 h-7 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
         </div>
-
-        {/* Desktop menu */}
-        <ul className="hidden lg:flex gap-8 text-base font-medium">
-          {["Home", "Services", "Pricing", "Order Now"].map((item) => (
-            <button
-              key={item}
-              className="hover:bg-blue-400 hover:text-white text-gray-600 px-4 py-2 rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
-            >
-              {item}
-            </button>
-          ))}
-        </ul>
-      </nav>
-
-      {/* Mobile dropdown */}
-      {isOpen && (
-        <div className="lg:hidden bg-white shadow-md py-3 px-5 space-y-4 absolute w-full z-10">
-          {["Home", "Services", "Pricing", "Order Now"].map((item) => (
-            <button
-              key={item}
-              className="block w-full text-left hover:bg-blue-400 hover:text-white text-gray-700 px-4 py-2 rounded transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </button>
-          ))}
+        </nav>
+           {isOpen && (
+        <div className="lg:hidden bg-white shadow p-3 px-5 space-y-5">
+          <a href="#home" className="block text-gray-600 hover:text-blue-400">Home</a>
+          <a href="#services" className="block text-gray-600 hover:text-blue-400">Services</a>
+          <a href="#pricing" className="block text-gray-600 hover:text-blue-400">Pricing</a>
+          <a href="#order" className="block text-gray-600 hover:text-blue-400">Order Now</a>
+          <button className="block w-full text-left text-gray-600 px-4 py-2 rounded hover:bg-gray-100">Sign In</button>
+          <button className="block w-full text-left bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Get Started</button>
         </div>
       )}
-    </div>
+       </div>
   );
 };
 
