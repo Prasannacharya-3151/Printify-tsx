@@ -4,6 +4,8 @@ import HeroSection from "./Components/HeroSection";
 import WhyChoosePrintify from "./Components/WhyChoosePrintify";
 import Aspects from "./Components/Aspects";
 import Feature from "./Components/Feature";
+import Feedback from "./Components/Feedback"
+import Footer from "./Components/Footer";
 
 const App:React.FC = () => {
   return(
@@ -13,6 +15,8 @@ const App:React.FC = () => {
     <WhyChoosePrintify />
     <Aspects />
     <Feature />
+    <Feedback />
+    <Footer />
     
     </>
   );
