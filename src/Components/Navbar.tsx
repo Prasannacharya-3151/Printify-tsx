@@ -23,8 +23,10 @@ const Navbar: React.FC = () => {
           <a href="#Pricing" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Pricing</a>
           <a href="#Order Now" className="text-gray-600 font-semibold no-underline hover:underline hover:decoration-blue-400 hover:decoration-2 hover:underline-offset-20">Order Now</a>
           <div className="ml-30 space-x-4">
-          <button className="text-gray-600 rounded border border-gray-500 px-6 py-2 hover:bg-gray-100">Sign In</button>
-          <button className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Get Started</button>
+          <button 
+          onClick={()=>window.open("https://www.xerofy.net/signup","_self")} className="text-gray-600 rounded border border-gray-500 px-6 py-2 hover:bg-gray-100">Sign Up</button>
+          <button 
+          onClick={()=>window.open("https://www.xerofy.net/signin","_self")} className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-500">Login</button>
         </div>
         </div>
 
@@ -47,8 +49,12 @@ const Navbar: React.FC = () => {
           <a href="#services" className="block text-gray-600 hover:text-blue-400">Services</a>
           <a href="#pricing" className="block text-gray-600 hover:text-blue-400">Pricing</a>
           <a href="#order" className="block text-gray-600 hover:text-blue-400">Order Now</a>
-          <button className="block w-full text-left text-gray-600 px-4 py-2 rounded hover:bg-gray-100">Sign In</button>
-          <button className="block w-full text-left bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Get Started</button>
+          <button 
+          onClick={()=>window.open("https://www.xerofy.net/signup","_self")} 
+          className="block w-full text-left text-gray-600 px-4 py-2 rounded hover:bg-gray-100">Sign Up</button>
+          <button
+          onClick={()=> window.open("https://www.xerofy.net/signin","_self")}
+          className="block w-full text-left bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Login</button>
         </div>
       )}
        </div>

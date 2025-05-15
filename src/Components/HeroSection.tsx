@@ -13,7 +13,8 @@ const HeroSection:React.FC = () => {
             <span className="inline-flex items-center px-2 py-0.5 bg-white text-yellow-400 rounded-lg align-middle font-serif text-3xl">online.</span>
             </p>
              <p className="text-base md:text-lg mb-7 text-white">Upload, Customize, Print  all in one place.</p>
-            <button className="bg-white px-6 py-3 rounded-xl h-12 font-semibold transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-blue-400">Start Printing</button>
+            <button 
+            onClick={()=>window.open("https://www.xerofy.net/signup","_self")}className="bg-white px-6 py-3 rounded-xl h-12 font-semibold transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-blue-400">Start Printing</button>
             </div>
 
             <div className="flex justify-center md:mr-20">

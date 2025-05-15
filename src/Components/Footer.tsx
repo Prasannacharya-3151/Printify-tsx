@@ -6,7 +6,9 @@ const Footer: React.FC = () => {
       <div className="text-center bg-blue-800 py-14 px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-white">Ready to Start Printing?</h1>
         <p className="py-6 md:py-10 text-lg font-semibold text-gray-400">Upload your files now and get your prints in minutes.it's that simple</p>
-        <button className="text-blue-800 font-semibold py-3 rounded-lg bg-white px-6 hover:scale-105 transition-transform duration-150 ease-in-out">Get Started</button>
+        <button 
+        onClick={()=>window.open("https://www.xerofy.net/signup","_self")}
+        className="text-blue-800 font-semibold py-3 rounded-lg bg-white px-6 hover:scale-105 transition-transform duration-150 ease-in-out">Get Started</button>
         </div>
         
            <hr className="border-t-2 border-gray-200 my-10 w-full mx-auto"/>
@@ -52,4 +54,3 @@ const Footer: React.FC = () => {
 
 export default Footer;
 
-// © 2024 Ace Printify

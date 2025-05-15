@@ -39,7 +39,9 @@ const Aspects:React.FC=()=>{
                             <p className="text-gray-600">Pay online and get your prints immediately or schedule pickup.</p>
                         </div>
                         </div>
-                          <button className="bg-white text-blue-500 px-6 py-3 rounded-xl h-12 font-semibold transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg flex justify-center mx-auto mt-14">Start Printing Now</button>
+                          <button 
+                          onClick={()=>window.open("https://www.xerofy.net/signup","_self")}
+                          className="bg-white text-blue-500 px-6 py-3 rounded-xl h-12 font-semibold transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg flex justify-center mx-auto mt-14">Start Printing Now</button>
                 </div>
                     
  )
